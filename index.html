@@ -14,7 +14,7 @@
 
     <!-- Custom CSS for the '3 Col Portfolio' Template -->
     <link href="Three%20Column%20Portfolio%20Template%20for%20Bootstrap%203_files/3-col-portfolio.css" rel="stylesheet">
-
+ 
     <style>
         /* Smooth Scrolling */
         html {
@@ -287,38 +287,65 @@
             background: #ffffff;
         }
 
+        .testimonials .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .testimonial-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            width: 100%;
         }
 
         .testimonial-header h1 {
             color: #27ae60;
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        .testimonial-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .testimonial-image {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .testimonial-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
         }
 
         .testimonial-videos {
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .testimonial-videos iframe {
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-image {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .testimonial-image img {
+            display: block;
+            margin: 0;
             max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Contact Section */
@@ -363,15 +390,26 @@
                 padding: 20px;
             }
 
+            .testimonial-header h1 {
+                font-size: 2em;
+            }
+
+            .testimonial-image {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
             .testimonial-videos {
                 flex-direction: column;
                 align-items: center;
+                gap: 20px;
             }
 
             .testimonial-videos iframe {
                 width: 100%;
                 max-width: 100%;
                 height: auto;
+                min-height: 250px;
             }
         }
 
@@ -389,30 +427,87 @@
         .navbar-brand:hover {
             color: #27ae60 !important;
         }
+
+        /* Fixed WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 10px #999;
+        }
+
+        .whatsapp-float img {
+            width: 40px;
+            height: 40px;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float img {
+                width: 35px;
+                height: 35px;
+            }
+        }
     </style>
-</head>
+  </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
+      <div class="container">
+        <div class="navbar-header">
                 <a class="navbar-brand" href="#hero">I'M ZIYAD RAHMAN</a>
-            </div>
-            <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
-                <ul class="nav navbar-nav">
+        </div>
+        <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
+          <ul class="nav navbar-nav">
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#recent-work">Recent Work</a></li>
                     <li><a href="#mobile-apps">Mobile Apps</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
-                </ul>
+          </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="container">
+    <div class="container">
             <div class="hero-content">
                 <h1 class="hero-name">I'M ZIYAD RAHMAN</h1>
                 <p class="hero-tagline">Technical Product Builder | Full-Stack Development | Business Automation</p>
@@ -443,8 +538,8 @@
 
                 <div class="hero-track-record">
                     <strong>Track Record:</strong> Built ₹6-7L+ worth of systems for retail chains, manufacturers, education platforms, and service businesses.
-                </div>
-
+         </div>
+         
                 <p class="hero-cta">Ready to solve your business problem? Let's talk.</p>
 
                 <div class="social-links">
@@ -454,6 +549,43 @@
                     <a href="https://www.linkedin.com/in/ziyad-rahman-88a750398/" target="_blank" rel="noopener noreferrer">
                         <img style="width:40px;height:40px;margin:5px;" src="linkedin.png" alt="LinkedIn">
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="testimonial-header">
+                <h1>Words By My Clients</h1>
+            </div>
+
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <a href="#project-link"><img class="img-responsive" src="review1.png" alt="Client Review"></a>
+                </div>
+
+                <div class="testimonial-videos">
+                    <iframe width="420" height="345" 
+                        src="https://www.youtube-nocookie.com/embed/MHfSKW3vQr0?rel=0&modestbranding=1&playsinline=1&enablejsapi=1" 
+                        frameborder="0" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        loading="lazy"
+                        style="border-style: none;">
+                    </iframe>
+
+                    <iframe width="420" height="345" 
+                        src="https://www.youtube-nocookie.com/embed/mwMjimfmw_w?rel=0&modestbranding=1&playsinline=1&enablejsapi=1" 
+                        frameborder="0" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        loading="lazy"
+                        style="border-style: none;display: none;">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -525,12 +657,12 @@
                                 <li>Reduced training coordination time by 60%</li>
                             </ul>
                             <p style="margin-top: 10px; margin-bottom: 0;"><strong>Status:</strong> Live and operational</p>
-                        </div>
-
+          </div>
+    
                         <a href="#contact" class="btn-demo">Contact for Demo</a>
-                    </div>
-                </div>
-
+      </div>
+      </div>
+     
                 <!-- Project 3: Custom Business Solutions -->
                 <div class="col-md-12">
                     <div class="project-card">
@@ -572,96 +704,73 @@
                 <h2>Android Development Portfolio</h2>
             </div>
 
-            <div class="row">
-                <div class="col-md-4 portfolio-item">
+      <div class="row">
+        <div class="col-md-4 portfolio-item">
                     <a href="#project-link"><img class="img-responsive" src="orderbook final.png" alt="Orderbook"></a>
-                    <h3><a href="#project-link">Orderbook</a></h3>
-                    <p style="font-weight: normal;">Orderbook is an application for customized garment makers.
-                        It helps to <b>Track all orders</b>, Notify designers before the due date
-                        Of orders.<br>
-                        Technology used: Android, Firebase.<br>
-                        UI Design: Adobe XD<br>
-                    </p>
+          <h3><a href="#project-link">Orderbook</a></h3>
+          <p style="font-weight: normal;">Orderbook is an application for customized garment makers.
+            It helps to <b>Track all orders</b>, Notify designers before the due date
+            Of orders.<br>
+            Technology used: Android, Firebase.<br>
+            UI Design: Adobe XD<br>
+            </p>
                     <center><a href="https://drive.google.com/file/d/1R9wan4vkoGd0tT8vuyalBNfoYui4mMDE/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button5">DOWNLOAD APK</a></center>
-                </div>
+        </div>
 
-                <div class="col-md-4 portfolio-item">
+        <div class="col-md-4 portfolio-item">
                     <a href="#project-link"><img class="img-responsive" src="workflow final.png" alt="Workflow"></a>
-                    <h3><a href="#project-link">Work flow</a></h3>
+          <h3><a href="#project-link">Work flow</a></h3>
                     <p style="font-weight: normal;">Work flow is an application for customized garment makers.<br>
-                        It helps <b>Record</b> the time taken to produce a garment using QR code.<br>
-                        Technology used: Android, Firebase.<br>
-                        UI Design: Adobe XD.<br>
-                    </p>
+            It helps <b>Record</b> the time taken to produce a garment using QR code.<br>
+            Technology used: Android, Firebase.<br>
+            UI Design: Adobe XD.<br>
+          </p>
                     <center><a href="https://drive.google.com/file/d/1a43_hQwpcuumQU6M_ffjr2MA9e3yzEXS/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button5">DOWNLOAD APK</a></center>
-                </div>
+        </div>
 
-                <div class="col-md-4 portfolio-item">
+        <div class="col-md-4 portfolio-item">
                     <a href="#project-link"><img class="img-responsive" src="djerbajobs final.png" alt="Djerba Jobs"></a>
-                    <h3><a href="#project-link">Djerba Jobs</a></h3>
+          <h3><a href="#project-link">Djerba Jobs</a></h3>
                     <p style="font-weight: normal;">Djerba Jobs is a job searching application.<br>
-                        Technology used: Android, Firebase.<br>
-                        UI Design: Adobe XD.<br>
-                    </p>
+            Technology used: Android, Firebase.<br>
+            UI Design: Adobe XD.<br>
+          </p>
                     <center><a href="https://play.google.com/store/apps/details?id=com.maxking.djerbajobs&hl=en_IN&gl=US" target="_blank" rel="noopener noreferrer" class="button5">GET IT ON PLAYSTORE</a></center>
-                </div>
-            </div>
+        </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-4 portfolio-item">
+        <div class="row">
+        <div class="col-md-4 portfolio-item">
                     <a href="#project-link"><img class="img-responsive" src="zrecommerceapp.png" alt="ZR Ecommerce App"></a>
-                    <h3><a href="#project-link">ZR ECOMMERCE APP</a></h3>
-                    <p style="font-weight: normal;">Simple ecommerce application.<br>
-                        Technology used: Android, SQLite.<br>
-                        UI Design: Adobe XD.<br>
-                    </p>
+          <h3><a href="#project-link">ZR ECOMMERCE APP</a></h3>
+          <p style="font-weight: normal;">Simple ecommerce application.<br>
+            Technology used: Android, SQLite.<br>
+            UI Design: Adobe XD.<br>
+          </p>
                     <center><a href="https://drive.google.com/file/d/1FzWytudMXM_OXNUll68Zaq0yPSHLiTbQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button5">DOWNLOAD APK</a></center>
-                </div>
+        </div>
 
-                <div class="col-md-4 portfolio-item">
+        <div class="col-md-4 portfolio-item">
                     <a href="#project-link"><img class="img-responsive" src="alquranmp3.jpg" alt="Al Quran MP3"></a>
-                    <h3><a href="#project-link">AL QURAN MP3</a></h3>
-                    <p style="font-weight: normal;">Al Quran mp3 was an android application 
-                        which users can read and hear <b>offline.</b><br>
-                        All the files downloaded from the webserver in the background after the installation and <b>store locally</b> which <b>reduces the app size.</b>
-                        <br>
-                        Technology used Android studio, Java, Firebase, Retrofit, SQLite.<br>
-                        UI Design: Adobe XD.<br>
-                    </p>
+          <h3><a href="#project-link">AL QURAN MP3</a></h3>
+          <p style="font-weight: normal;">Al Quran mp3 was an android application 
+            which users can read and hear <b>offline.</b><br>
+            All the files downloaded from the webserver in the background after the installation and <b>store locally</b> which <b>reduces the app size.</b>
+            <br>
+            Technology used Android studio, Java, Firebase, Retrofit, SQLite.<br>
+            UI Design: Adobe XD.<br>
+          </p>
                     <center><a href="https://play.google.com/store/apps/details?id=com.aslamtayyab.alquranmp3" target="_blank" rel="noopener noreferrer" class="button5">GET IT ON PLAYSTORE</a></center>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Client Testimonials Section -->
-    <section id="testimonials" class="section testimonials">
-        <div class="container">
-            <div class="testimonial-header">
-                <h1>Words By My Clients</h1>
-            </div>
-
-            <div class="testimonial-image">
-                <a href="#project-link"><img class="img-responsive" src="review1.png" alt="Client Review"></a>
-            </div>
-
-            <div class="testimonial-videos">
-                <iframe width="420" height="345" src="https://www.youtube.com/embed/MHfSKW3vQr0" 
-                    style="border-style: none;margin: 1%;" allowfullscreen>
-                </iframe>
-
-                <iframe width="420" height="345" src="https://www.youtube.com/embed/mwMjimfmw_w" 
-                    style="border-style: none;margin: 1%;display: none;" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
+      </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <footer>
-                <div class="row">
+    <div class="container">
+      <footer>
+        <div class="row">
                     <div class="col-lg-12">
                         <center>
                             <p>Connect me. - ziyadrahmanzr@gmail.com | 
@@ -672,12 +781,17 @@
                                     <img style="width:30px;height:30px;margin:5px;" src="linkedin.png" alt="LinkedIn">
                                 </a>
                             </p>
-                        </center>
-                    </div>
-                </div>
-            </footer>
+          </center>
+          </div>
+        </div>
+      </footer>
         </div>
     </section>
+      
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.link/cd2xfw" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Contact on WhatsApp">
+        <img src="whatsapp.png" alt="WhatsApp">
+    </a>
 
     <!-- JavaScript -->
     <script src="Three%20Column%20Portfolio%20Template%20for%20Bootstrap%203_files/jquery-1.js"></script>
