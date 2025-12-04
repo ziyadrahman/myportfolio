@@ -1,215 +1,703 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Technical product builder specializing in MERN Stack, Flutter, and React Native. Built ₹6-7L+ worth of systems for businesses. Available for custom software development.">
+    <meta name="author" content="Ziyad Rahman">
+    <meta name="keywords" content="Full-Stack Developer, MERN Stack, Flutter, React Native, Business Automation, Custom Software Development">
 
-    <title>ZIYAD RAHMAN</title>
+    <title>Ziyad Rahman - Full-Stack Developer | MERN & Flutter</title>
 
     <!-- Bootstrap core CSS -->
     <link href="Three%20Column%20Portfolio%20Template%20for%20Bootstrap%203_files/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS for the '3 Col Portfolio' Template -->
     <link href="Three%20Column%20Portfolio%20Template%20for%20Bootstrap%203_files/3-col-portfolio.css" rel="stylesheet">
- 
- 
-  
-  </head>
 
-  <body data-new-gr-c-s-check-loaded="8.867.0">
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
 
+        /* Hero Section Styling */
+        .hero-section {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin-top: 50px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .hero-tagline {
+            font-size: 1.3em;
+            color: #34495e;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .hero-services, .hero-approach {
+            margin: 25px 0;
+        }
+
+        .hero-services h4, .hero-approach h4 {
+            color: #27ae60;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .hero-services ul, .hero-approach ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .hero-services li, .hero-approach li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .hero-services li:before, .hero-approach li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .hero-track-record {
+            background: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid #27ae60;
+            margin: 25px 0;
+            font-weight: 500;
+        }
+
+        .hero-cta {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 1.5em;
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+
+        /* Recent Work Section */
+        .recent-work {
+            background: #ffffff;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+        }
+
+        .project-card .tech-stack {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .project-card .impact {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .project-card .impact ul {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .project-card .impact li {
+            margin: 5px 0;
+        }
+
+        .project-features {
+            margin: 15px 0;
+        }
+
+        .project-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-features li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .btn-demo {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-demo:hover {
+            background: #229954;
+            transform: scale(1.05);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile Applications Section */
+        .mobile-apps {
+            background: #f8f9fa;
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+
+        .portfolio-item img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item h3 {
+            margin-top: 15px;
+            color: #2c3e50;
+        }
+
+        .portfolio-item h3 a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .portfolio-item h3 a:hover {
+            color: #27ae60;
+        }
+
+        .button5 {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #2c3e50;
+            background: transparent;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .button5:hover {
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #ffffff;
+        }
+
+        .testimonial-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-header h1 {
+            color: #27ae60;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-videos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .testimonial-videos iframe {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            color: #27ae60;
+        }
+
+        .contact-section img {
+            transition: transform 0.3s ease;
+        }
+
+        .contact-section a:hover img {
+            transform: scale(1.15);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-name {
+                font-size: 1.8em;
+            }
+
+            .hero-tagline {
+                font-size: 1.1em;
+            }
+
+            .section-header h1 {
+                font-size: 2em;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+            .testimonial-videos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial-videos iframe {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #2c3e50 !important;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .navbar-brand:hover {
+            color: #27ae60 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          
-          <a class="navbar-brand">I'M Ziyad Rahman</a>
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#hero">I'M ZIYAD RAHMAN</a>
+            </div>
+            <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li><a href="#recent-work">Recent Work</a></li>
+                    <li><a href="#mobile-apps">Mobile Apps</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
-          <ul class="nav navbar-nav">
-            <li><a href="#about"></a></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
     </nav>
 
-    <div class="container">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-name">I'M ZIYAD RAHMAN</h1>
+                <p class="hero-tagline">Technical Product Builder | Full-Stack Development | Business Automation</p>
+                
+                <div class="hero-intro">
+                    <p>I turn business problems into working software. Whether you're a small business needing custom tools or a startup launching an MVP, I build complete solutions using modern tech and lean teams.</p>
+                </div>
 
-      <div class="row">
+                <div class="hero-services">
+                    <h4>Services:</h4>
+                    <ul>
+                        <li>Web Applications (MERN Stack - React, Node.js, MongoDB)</li>
+                        <li>Mobile Apps (Flutter & React Native - iOS & Android)</li>
+                        <li>WhatsApp Automation & Business Bots</li>
+                        <li>Custom Business Software (CRM, Inventory, Reporting)</li>
+                        <li>End-to-end: Design → Development → Deployment</li>
+                    </ul>
+                </div>
 
-        <div class="col-lg-12" style="width: 50%;float: left;">
-          <br>
-           <p style="font-size:15px"><b style="font-size:20px">Product Builder | MERN, Flutter & React Native | Business Automation</b><br><br>
-           
-            I help small businesses and startups build custom software solutions without the enterprise price tag. Over 2+ years, I've delivered systems worth ₹6-7 lakh for retail, manufacturing, and education businesses.<br>
-            <br>
-            <b>What I Build:</b><br>
-            - Custom business tools (inventory, CRM, order tracking)<br>
-            - Web & mobile applications (MERN Stack, Flutter, React Native)<br>
-            - WhatsApp automation & chatbots<br>
-            - Complete MVPs from idea to launch<br>
-            <br>
-            <b>How I Work:</b><br>
-            - Fast delivery using AI-assisted development<br>
-            - Lean team approach for cost efficiency<br>
-            - End-to-end: from concept to deployment<br>
-            - Clear communication, no technical jargon<br>
-            <br>
-            Built for businesses like yours: retail stores, manufacturers, service providers, and startups who need software that works without breaking the bank.<br>
-            <br>
-            Got a business problem? Let's build the solution.<br>
-            <br>
-            <a href="https://wa.link/cd2xfw"><img style="width:30px;height: 30px;margin: 5px;;"src="whatsapp.png"></a>
-            <a href="https://www.linkedin.com/in/ziyad-rahman-88a750398/"><img style="width:30px;height: 30px;margin: 5px;;"src="linkedin.png"></a>
-            </p>
-            
-         </div>
-         
-        <div class="col-lg-12" style="width: 50%;float: left;"> 
-          <p style="float: right;"><h1 style="color: green;">Words By My Clients.</h1>
-            <a href="#project-link"><img class="img-responsive" src="review1.png"></a>
+                <div class="hero-approach">
+                    <h4>My Approach:</h4>
+                    <ul>
+                        <li>AI-assisted development for faster delivery</li>
+                        <li>Small expert team = lower costs, high quality</li>
+                        <li>Focus on solving your actual problem, not just writing code</li>
+                    </ul>
+                </div>
 
-            
+                <div class="hero-track-record">
+                    <strong>Track Record:</strong> Built ₹6-7L+ worth of systems for retail chains, manufacturers, education platforms, and service businesses.
+                </div>
 
-        </p>
+                <p class="hero-cta">Ready to solve your business problem? Let's talk.</p>
+
+                <div class="social-links">
+                    <a href="https://wa.link/cd2xfw" target="_blank" rel="noopener noreferrer">
+                        <img style="width:40px;height:40px;margin:5px;" src="whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ziyad-rahman-88a750398/" target="_blank" rel="noopener noreferrer">
+                        <img style="width:40px;height:40px;margin:5px;" src="linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" style="width: 50%;float: left;"> 
-          <div style="display: flex;float: left;">
+    </section>
 
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/MHfSKW3vQr0" 
-          style="border-style: none;margin: 1%;">
-          </iframe>
+    <!-- Recent Work Section -->
+    <section id="recent-work" class="section recent-work">
+        <div class="container">
+            <div class="section-header">
+                <h1>Recent Work</h1>
+                <h2>Enterprise & Business Solutions</h2>
+            </div>
 
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/mwMjimfmw_w" 
-      style="border-style: none;margin: 1%;display: none;">
-          </iframe> 
-          
-          </div>
-    
-      </div>
-      </div>
-     
+            <div class="row">
+                <!-- Project 1: RootFin -->
+                <div class="col-md-12">
+                    <div class="project-card">
+                        <h3>RootFin - Financial Management Platform</h3>
+                        <p>Multi-store financial platform handling billing, reporting, and analytics for a 20-store retail chain with ₹20cr+ annual revenue. Provides daybook summaries, sales reports, and real-time financial insights across all locations.</p>
+                        
+                        <div class="tech-stack">
+                            <strong>Tech Stack:</strong> MongoDB, Express.js, React, Node.js, Firebase
+                        </div>
 
-      <div class="row">
-        <h1 class="page-header">Portfolio <small</small></h1>
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="orderbook final.png"></a>
-          <h3><a href="#project-link">Orderbook</a></h3>
-          <p style="font-weight: normal;">Orderbook is an application for customized garment makers.
-            It helps to <b>Track all orders</b>, Notify designers before the due date
-            Of orders.<br>
-            Technology used: Android, Firebase.<br>
-            UI Design: Adobe XD<br>
-           
-            </p>
-            <center> <a href="https://drive.google.com/file/d/1R9wan4vkoGd0tT8vuyalBNfoYui4mMDE/view?usp=sharing" class="button5" style="border-color:black; background-color:rgba(0,0,0,0); color:black">DOWNLOAD APK</a>
-            </center>
+                        <div class="impact">
+                            <strong>Impact:</strong>
+                            <ul>
+                                <li>Used daily by 20 retail locations</li>
+                                <li>Saved ₹4.65 lakh in development costs vs outsourcing</li>
+                                <li>Handles critical daily operations for ₹20cr+ revenue business</li>
+                            </ul>
+                            <p style="margin-top: 10px; margin-bottom: 0;"><strong>Status:</strong> Live and operational</p>
+                        </div>
+
+                        <a href="#contact" class="btn-demo">Contact for Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: LMS -->
+                <div class="col-md-12">
+                    <div class="project-card">
+                        <h3>Learning Management System (LMS)</h3>
+                        <p>Complete learning platform with web admin panel and native mobile applications for iOS and Android. Handles training creation, assignments, progress tracking, and staff performance analytics. Designed for businesses to train employees at scale.</p>
+                        
+                        <div class="tech-stack">
+                            <strong>Tech Stack:</strong>
+                            <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+                                <li>• Web: React, Node.js, MongoDB, Express.js</li>
+                                <li>• Mobile: Flutter (iOS & Android)</li>
+                                <li>• Backend: Firebase, RESTful APIs</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-features">
+                            <strong>Features:</strong>
+                            <ul>
+                                <li>Web admin panel for content management</li>
+                                <li>Native iOS app (Flutter)</li>
+                                <li>Native Android app (Flutter)</li>
+                                <li>Video training with assessments</li>
+                                <li>Progress tracking and analytics</li>
+                            </ul>
+                        </div>
+
+                        <div class="impact">
+                            <strong>Impact:</strong>
+                            <ul>
+                                <li>Supports training for 100+ users</li>
+                                <li>Reduced training coordination time by 60%</li>
+                            </ul>
+                            <p style="margin-top: 10px; margin-bottom: 0;"><strong>Status:</strong> Live and operational</p>
+                        </div>
+
+                        <a href="#contact" class="btn-demo">Contact for Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Custom Business Solutions -->
+                <div class="col-md-12">
+                    <div class="project-card">
+                        <h3>Custom Business Solutions</h3>
+                        <p>I've built multiple custom internal tools and automation systems including telecaller productivity systems, item search platforms, unique code generators for inventory, and ERP systems. Each solution designed to solve specific business bottlenecks and improve operational efficiency.</p>
+                        
+                        <div class="tech-stack">
+                            <strong>Tech Stack:</strong> MERN Stack, Flutter, Firebase, AI-assisted development, WhatsApp Business API
+                        </div>
+
+                        <div class="project-features">
+                            <strong>Solutions delivered:</strong>
+                            <ul>
+                                <li>Telecaller system with productivity tracking</li>
+                                <li>Item search platform for retail staff</li>
+                                <li>Unique code generator (26K+ codes generated)</li>
+                                <li>Inventory management systems</li>
+                                <li>WhatsApp automation bots</li>
+                            </ul>
+                        </div>
+
+                        <div class="impact">
+                            <p><strong>Approach:</strong> Fast delivery using modern AI tools, lean expert teams, and iterative development</p>
+                            <p style="margin-top: 10px;"><strong>Impact:</strong> Saved businesses ₹1.8 lakh+ in licensing costs by building custom alternatives</p>
+                        </div>
+
+                        <a href="#contact" class="btn-demo">View Case Studies</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="workflow final.png"></a>
-          <h3><a href="#project-link">Work flow</a></h3>
-          <p style="font-weight: normal;">Work flow  is an application for customized garment makers.<br>
-            It helps <b>Record</b> the time taken to produce a garment using QR code.<br>
+    <!-- Mobile Applications Section -->
+    <section id="mobile-apps" class="section mobile-apps">
+        <div class="container">
+            <div class="section-header">
+                <h1>Mobile Applications</h1>
+                <h2>Android Development Portfolio</h2>
+            </div>
 
-            Technology used: Android, Firebase.<br>
-            UI Design: Adobe XD.<br>
-           
-          </p>
-          <center> <a href="https://drive.google.com/file/d/1a43_hQwpcuumQU6M_ffjr2MA9e3yzEXS/view?usp=sharing" class="button5" style="border-color:black; background-color:rgba(0,0,0,0); color:black">DOWNLOAD APK</a>
-          </center>
+            <div class="row">
+                <div class="col-md-4 portfolio-item">
+                    <a href="#project-link"><img class="img-responsive" src="orderbook final.png" alt="Orderbook"></a>
+                    <h3><a href="#project-link">Orderbook</a></h3>
+                    <p style="font-weight: normal;">Orderbook is an application for customized garment makers.
+                        It helps to <b>Track all orders</b>, Notify designers before the due date
+                        Of orders.<br>
+                        Technology used: Android, Firebase.<br>
+                        UI Design: Adobe XD<br>
+                    </p>
+                    <center><a href="https://drive.google.com/file/d/1R9wan4vkoGd0tT8vuyalBNfoYui4mMDE/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button5">DOWNLOAD APK</a></center>
+                </div>
+
+                <div class="col-md-4 portfolio-item">
+                    <a href="#project-link"><img class="img-responsive" src="workflow final.png" alt="Workflow"></a>
+                    <h3><a href="#project-link">Work flow</a></h3>
+                    <p style="font-weight: normal;">Work flow is an application for customized garment makers.<br>
+                        It helps <b>Record</b> the time taken to produce a garment using QR code.<br>
+                        Technology used: Android, Firebase.<br>
+                        UI Design: Adobe XD.<br>
+                    </p>
+                    <center><a href="https://drive.google.com/file/d/1a43_hQwpcuumQU6M_ffjr2MA9e3yzEXS/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button5">DOWNLOAD APK</a></center>
+                </div>
+
+                <div class="col-md-4 portfolio-item">
+                    <a href="#project-link"><img class="img-responsive" src="djerbajobs final.png" alt="Djerba Jobs"></a>
+                    <h3><a href="#project-link">Djerba Jobs</a></h3>
+                    <p style="font-weight: normal;">Djerba Jobs is a job searching application.<br>
+                        Technology used: Android, Firebase.<br>
+                        UI Design: Adobe XD.<br>
+                    </p>
+                    <center><a href="https://play.google.com/store/apps/details?id=com.maxking.djerbajobs&hl=en_IN&gl=US" target="_blank" rel="noopener noreferrer" class="button5">GET IT ON PLAYSTORE</a></center>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 portfolio-item">
+                    <a href="#project-link"><img class="img-responsive" src="zrecommerceapp.png" alt="ZR Ecommerce App"></a>
+                    <h3><a href="#project-link">ZR ECOMMERCE APP</a></h3>
+                    <p style="font-weight: normal;">Simple ecommerce application.<br>
+                        Technology used: Android, SQLite.<br>
+                        UI Design: Adobe XD.<br>
+                    </p>
+                    <center><a href="https://drive.google.com/file/d/1FzWytudMXM_OXNUll68Zaq0yPSHLiTbQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button5">DOWNLOAD APK</a></center>
+                </div>
+
+                <div class="col-md-4 portfolio-item">
+                    <a href="#project-link"><img class="img-responsive" src="alquranmp3.jpg" alt="Al Quran MP3"></a>
+                    <h3><a href="#project-link">AL QURAN MP3</a></h3>
+                    <p style="font-weight: normal;">Al Quran mp3 was an android application 
+                        which users can read and hear <b>offline.</b><br>
+                        All the files downloaded from the webserver in the background after the installation and <b>store locally</b> which <b>reduces the app size.</b>
+                        <br>
+                        Technology used Android studio, Java, Firebase, Retrofit, SQLite.<br>
+                        UI Design: Adobe XD.<br>
+                    </p>
+                    <center><a href="https://play.google.com/store/apps/details?id=com.aslamtayyab.alquranmp3" target="_blank" rel="noopener noreferrer" class="button5">GET IT ON PLAYSTORE</a></center>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="djerbajobs final.png"></a>
-          <h3><a href="#project-link">Djerba Jobs</a></h3>
-          <p style="font-weight: normal;">Djerba Jobs   is a job searching application.<br>
-            Technology used: Android, Firebase.<br>
-            UI Design: Adobe XD.<br>
-          </p>
-         <center> <a href="https://play.google.com/store/apps/details?id=com.maxking.djerbajobs&hl=en_IN&gl=US" class="button5" style="border-color:black; background-color:rgba(0,0,0,0); color:black">GET IT ON PLAYSTORE</a>
-         </center>
+    <!-- Client Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="testimonial-header">
+                <h1>Words By My Clients</h1>
+            </div>
+
+            <div class="testimonial-image">
+                <a href="#project-link"><img class="img-responsive" src="review1.png" alt="Client Review"></a>
+            </div>
+
+            <div class="testimonial-videos">
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/MHfSKW3vQr0" 
+                    style="border-style: none;margin: 1%;" allowfullscreen>
+                </iframe>
+
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/mwMjimfmw_w" 
+                    style="border-style: none;margin: 1%;display: none;" allowfullscreen>
+                </iframe>
+            </div>
         </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <center>
+                            <p>Connect me. - ziyadrahmanzr@gmail.com | 
+                                <a href="https://wa.link/cd2xfw" target="_blank" rel="noopener noreferrer">
+                                    <img style="width:30px;height:30px;margin:5px;" src="whatsapp.png" alt="WhatsApp">
+                                </a> | 
+                                <a href="https://www.linkedin.com/in/ziyad-rahman-88a750398/" target="_blank" rel="noopener noreferrer">
+                                    <img style="width:30px;height:30px;margin:5px;" src="linkedin.png" alt="LinkedIn">
+                                </a>
+                            </p>
+                        </center>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <div class="row">
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="zrecommerceapp.png"></a>
-          <h3><a href="#project-link">ZR ECOMMERCE APP</a></h3>
-          <p style="font-weight: normal;">Simple ecommerce application.<br>
-            Technology used: Android, SQLite.<br>
-            UI Design: Adobe XD.<br>
-            
-          
-          </p>
-          <center> <a href="https://drive.google.com/file/d/1FzWytudMXM_OXNUll68Zaq0yPSHLiTbQ/view?usp=sharing" class="button5" style="border-color:black; background-color:rgba(0,0,0,0); color:black">DOWNLOAD APK</a>
-          </center>
-        </div>
-
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="alquranmp3.jpg"></a>
-          <h3><a href="#project-link">AL QURAN MP3</a></h3>
-          <p style="font-weight: normal;">Al Quran mp3 was an android application 
-            which users can read and hear <b>offline.</b><br>
-            All the files downloaded from the webserver in the background after the installation and <b>store locally</b> which <b>reduces the app size.</b>
-            <br>
-            Technology used Android studio, Java, Firebase, Retrofit, SQLite.<br>
-            UI Design: Adobe XD.<br>
-          
-          </p>
-          <center> <a href="https://play.google.com/store/apps/details?id=com.aslamtayyab.alquranmp3" class="button5" style="border-color:black; background-color:rgba(0,0,0,0); color:black">GET IT ON PLAYSTORE</a>
-          </center>
-        </div>
-        
-
-      </div>
-      </div>
-
-      <hr>
-
-      <div class="row text-center">
-        
-        
-
-      </div>
-
-    </div><!-- /.container -->
-
-    <div class="container">
-
-      <hr>
-
-      <footer>
-        <div class="row">
-          <div class="col-lg-12" ><center>
-            <p> Connect me. - ziyadrahmanzr@gmail.com | <a href="https://wa.link/cd2xfw"><img style="width:30px;height: 30px;margin: 5px;;"src="whatsapp.png"></a> 
-            | <a href="https://www.linkedin.com/in/ziyad-rahman-88a750398/"><img style="width:30px;height: 30px;margin: 5px;;"src="linkedin.png"></a> </p>
-          </center>
-          </div>
-        </div>
-      </footer>
-      
-    </div><!-- /.container -->
+    </section>
 
     <!-- JavaScript -->
     <script src="Three%20Column%20Portfolio%20Template%20for%20Bootstrap%203_files/jquery-1.js"></script>
     <script src="Three%20Column%20Portfolio%20Template%20for%20Bootstrap%203_files/bootstrap.js"></script>
     <script type="text/javascript">
-      var dt = new Date();
-      document.getElementById('getCurrentDate').innerHTML = dt.getFullYear();
-        
-        function Redirect(){
-  window.location.href = ("https://ziyadmangad.wixsite.com/website-1");
-}
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-setTimeout('Redirect()', 1000);
+        // Remove redirect script - keeping portfolio on this domain
     </script>
-  
-
-</body></html>
+</body>
+</html>
