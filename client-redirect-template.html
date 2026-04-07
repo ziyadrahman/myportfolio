@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    ============================================================
+    CTR REDIRECT PAGE — copy this file to client-name.html
+    ============================================================
+
+    EDIT FOR EACH NEW CLIENT:
+    1) FILE NAME: save as client-name.html (e.g. arvind.html)
+
+    2) CLIENT NAME: replace CLIENT_NAME in og tags, GA, and <body>
+
+    3) Open Graph (LinkedIn preview):
+       - og:title
+       - og:description
+       - og:image → absolute URL, e.g.
+         https://ziyadrahman.github.io/myportfolio/images/client-name.png
+       - og:url → this page’s full URL
+
+    4) GA4: replace G-XXXX with your Measurement ID
+
+    THUMBNAIL: put image at /images/client-name.png (e.g. /images/arvind.png)
+    Recommended: 1200×630 for social previews.
+
+    DEPLOY: commit, push to your GitHub Pages branch; test with Post Inspector:
+    https://www.linkedin.com/post-inspector/
+
+    This page records a visit then redirects to the main portfolio (~1s delay).
+    ============================================================
+  -->
+
+  <meta property="og:title" content="Hi CLIENT_NAME — quick intro by Ziyad Rahman">
+  <meta property="og:description" content="Hi CLIENT_NAME, click through to view my portfolio and relevant work.">
+  <meta property="og:image" content="https://ziyadrahman.github.io/myportfolio/images/client-name.png">
+  <meta property="og:url" content="https://ziyadrahman.github.io/myportfolio/client-name.html">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://ziyadrahman.github.io/myportfolio/client-name.html">
+
+  <!-- Google Analytics (gtag.js) — fires before meta refresh redirect -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXX', {
+      page_title: 'Redirect - CLIENT_NAME',
+      page_path: (location.pathname || '') + (location.search || '')
+    });
+    gtag('event', 'redirect_ctr_test', {
+      client_name: 'CLIENT_NAME',
+      destination: 'myportfolio_main'
+    });
+  </script>
+
+  <!-- ~1 second delay so analytics can send before navigation -->
+  <meta http-equiv="refresh" content="1;url=https://ziyadrahman.github.io/myportfolio/">
+  <title>Loading…</title>
+</head>
+<body>
+  <p style="font-family: system-ui, sans-serif; text-align: center; margin-top: 4rem;">
+    Hi CLIENT_NAME, loading your page…
+  </p>
+  <p style="font-family: system-ui, sans-serif; text-align: center;">
+    If you are not redirected,
+    <a href="https://ziyadrahman.github.io/myportfolio/">open my portfolio</a>.
+  </p>
+</body>
+</html>
