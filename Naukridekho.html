@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- 🔧 EDIT ONLY CHANGE_HERE -->
+  <!-- ========================= -->
+
+  <!-- CLIENT NAME -->
+  <meta name="client-name" content="CHANGE_HERE">
+
+  <!-- OG TITLE -->
+  <meta property="og:title" content="CHANGE_HERE — I built something for your requirement" />
+
+  <!-- OG DESCRIPTION -->
+  <meta property="og:description" content="Quick personalized solution idea. Click to see how I’d approach your project." />
+
+  <!-- OG IMAGE -->
+  <meta property="og:image" content="https://ziyadrahman.github.io/myportfolio/images/CHANGE_HERE.png" />
+
+  <!-- PAGE URL -->
+  <meta property="og:url" content="https://ziyadrahman.github.io/myportfolio/CHANGE_HERE.html" />
+  <meta property="og:type" content="website">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://ziyadrahman.github.io/myportfolio/CHANGE_HERE.html">
+
+  <!-- ========================= -->
+  <!-- 📊 Google Analytics + Logic -->
+  <!-- ========================= -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWV74FMPV8"></script>
+
+  <script>
+    // ✅ Declare ONCE globally
+    const CLIENT_NAME = document.querySelector('meta[name="client-name"]').content;
+
+    // Google Analytics setup
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SWV74FMPV8', {
+      page_title: 'Redirect - ' + CLIENT_NAME,
+      page_path: location.pathname
+    });
+
+    // Track click (slight delay for accuracy)
+    setTimeout(() => {
+      gtag('event', 'redirect_ctr_test', {
+        client_name: CLIENT_NAME
+      });
+    }, 500);
+  </script>
+
+  <!-- ========================= -->
+  <!-- 🔁 Redirect -->
+  <!-- ========================= -->
+
+  <!-- ⚠️ Change only if needed -->
+  <meta http-equiv="refresh" content="2;url=https://ziyadrahman.github.io/myportfolio/">
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://ziyadrahman.github.io/myportfolio/";
+    }, 2000);
+  </script>
+
+  <title>Loading…</title>
+</head>
+
+<body>
+
+  <!-- Dynamic Greeting -->
+  <p id="greeting" style="font-family: system-ui, sans-serif; text-align: center; margin-top: 4rem;"></p>
+
+  <script>
+    // Use already declared CLIENT_NAME
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("greeting").innerText =
+        "Hi " + CLIENT_NAME + ", loading your page...";
+    });
+  </script>
+
+  <p style="font-family: system-ui, sans-serif; text-align: center;">
+    If you are not redirected,
+    <a href="https://ziyadrahman.github.io/myportfolio/">open my portfolio</a>.
+  </p>
+
+</body>
+</html>
